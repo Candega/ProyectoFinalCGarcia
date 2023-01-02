@@ -1,0 +1,14 @@
+{% extends "AppMarket/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<p>Titulo: {{producto.Titulo}}</p>
+<p>Autor: {{producto.Autor}}</p>
+<p>Precio: {{producto.Precio}}</p>
+<p>Editorial: {{producto.Editorial}}</p>
+
+<a href="{%url 'Producto List' %}">Regresar</a>
+
+{% endblock %}

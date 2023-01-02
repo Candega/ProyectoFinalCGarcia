@@ -1,0 +1,25 @@
+{% extends "AppMarket/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+
+<h1>Productos</h1>
+<a class="btn btn-primary" href="{% url 'Producto List' %}" >Lista de Productos</a>
+<a class="btn btn-primary" href="{% url 'Producto Create' %}">Crear Producto</a>
+<a class="btn btn-primary" href="{% url 'Buscar Producto' %}">Buscar Producto</a>
+<a class="btn btn-primary" href="{% url 'Inicio' %}">Volver a Inicio</a>
+
+<!--Ingresar un producto:
+<br>
+<form action=""   method="post">{% csrf_token %}
+         <table>
+                 {{miFormulario.as_table}}
+         </table>
+         <input type="submit",value="Enviar">
+</form>  
+
+
+
+{% endblock %}-->

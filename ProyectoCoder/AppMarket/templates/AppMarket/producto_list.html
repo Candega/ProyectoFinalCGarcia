@@ -1,0 +1,18 @@
+{% extends "AppMarket/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+<p>Lista de Títulos de Productos:</p> 
+{% for producto in object_list %}
+<p>{{producto.Titulo}}</p>
+<p>
+    <a href="{% url 'Producto Detail' producto.id %}">Ver</a>
+    <a href="{% url 'Producto Edit' producto.id %}">Editar</a>
+    <a href="{% url 'Producto Delete' producto.id %}">Borrar</a>
+</p>
+{% endfor %}
+<a class="btn btn-primary" href="{% url 'Inicio' %}">Volver a Inicio</a>
+<a class="btn btn-primary" href="{% url 'Productos' %}" >Volver a Productos</a>
+
+{% endblock %}

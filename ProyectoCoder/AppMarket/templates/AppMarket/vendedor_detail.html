@@ -1,0 +1,14 @@
+{% extends "AppMarket/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<p>Librería: {{vendedor.Libreria}}</p>
+<p>Email: {{vendedor.Email}}</p>
+<p>Teléfono: {{vendedor.Tel_libreria}}</p>
+<p>Ubicación: {{vendedor.Ubicacion}}</p>
+
+<a href="{%url 'Vendedor List' %}">Regresar</a>
+
+{% endblock %}

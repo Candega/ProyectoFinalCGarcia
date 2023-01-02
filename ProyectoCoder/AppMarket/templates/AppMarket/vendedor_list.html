@@ -1,0 +1,18 @@
+{% extends "AppMarket/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+<p>Lista de Librerias Vendedoras:</p>
+{% for vendedor in object_list %}
+<p>{{vendedor.Libreria}}</p>
+<p>
+    <a href="{% url 'Vendedor Detail' vendedor.id %}">Ver</a>
+    <a href="{% url 'Vendedor Edit' vendedor.id %}">Editar</a>
+    <a href="{% url 'Vendedor Delete' vendedor.id %}">Borrar</a>
+</p>
+{% endfor %}
+<a class="btn btn-primary" href="{% url 'Inicio' %}">Volver a Inicio</a>
+<a class="btn btn-primary" href="{% url 'Vendedor' %}">Volver a Vendedor</a>
+
+{% endblock %}

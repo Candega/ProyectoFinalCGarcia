@@ -1,0 +1,17 @@
+{% extends "AppMarket/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+{%if categ%}
+<ul>
+    {%for categoria in categ%}
+        <li>Genero: {{categoria.Genero}}</li>
+        <li>Año publicacion: {{categoria.Anio_publicacoin}}</li>
+    {%endfor%}
+</ul>
+{%endif%}    
+<a class="btn btn-primary" href="{% url 'Inicio' %}">Volver a Inicio</a>
+<a class="btn btn-primary" href="{% url 'Categoria' %}">Volver a Categoria</a>
+{%endblock%}

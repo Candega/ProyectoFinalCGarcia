@@ -1,0 +1,13 @@
+{% extends "AppMarket/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+<p>Buscar por el tipo de contenido: </p>
+<form action="/AppMarket/buscarc/"   method="get">{% csrf_token %}
+    <input type="text" name="Tipo_contenido" id="Tipo_contenido">
+    <input type="submit" value="Buscar Tipo Contenido">
+</form>  
+
+
+{% endblock %}

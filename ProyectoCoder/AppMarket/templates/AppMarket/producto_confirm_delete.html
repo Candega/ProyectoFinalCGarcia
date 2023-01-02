@@ -1,0 +1,13 @@
+{% extends "AppMarket/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<form method="post">{% csrf_token %}
+       ¿Estás seguro que deseas borrar el producto "{{ object.Titulo }}"?
+       <input type="submit" value="Eliminar"/>
+
+   </form>
+
+{% endblock %}

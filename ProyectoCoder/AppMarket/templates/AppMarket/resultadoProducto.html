@@ -1,0 +1,19 @@
+{% extends "AppMarket/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+{%if produc%}
+<ul>
+    {%for producto in produc%}
+        <li>Titulo: {{producto.Titulo}}</li>
+        <li>Autor: {{producto.Autor}}</li>
+        <li>Precio: {{producto.Precio}}</li>
+        <li>Editorial: {{producto.Editorial}}</li>
+    {%endfor%}
+</ul>
+{%endif%}    
+<a class="btn btn-primary" href="{% url 'Inicio' %}">Volver a Inicio</a>
+<a class="btn btn-primary" href="{% url 'Productos' %}" >Volver a Productos</a>
+{% endblock %}

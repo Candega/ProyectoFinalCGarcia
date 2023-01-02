@@ -1,0 +1,18 @@
+{% extends "AppMarket/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+{%if vende%}
+<ul>
+    {%for vendedor in vende%}
+        <li>Libreria: {{vendedor.Libreria}}</li>
+        <li>Email: {{vendedor.Email}}</li>
+        <li>Tel_libreria: {{vendedor.Tel_libreria}}</li>      
+    {%endfor%}
+</ul>
+{%endif%}    
+<a class="btn btn-primary" href="{% url 'Inicio' %}">Volver a Inicio</a>
+<a class="btn btn-primary" href="{% url 'Vendedor' %}">Volver a Vendedor</a>
+{% endblock %}

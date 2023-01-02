@@ -1,0 +1,25 @@
+{% extends "AppMarket/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<h1>Categoria</h1>
+<a class="btn btn-primary" href="{% url 'Categoria List' %}" >Lista de Categorias</a>
+<a class="btn btn-primary" href="{% url 'Categoria Create' %}">Crear Categoria</a>
+<a class="btn btn-primary" href="{% url 'Buscar Categoria' %}">Buscar Categoria</a>
+<a class="btn btn-primary" href="{% url 'Inicio' %}">Volver a Inicio</a>
+
+
+<!--Ingresar una categoria:
+<br>
+<form action=""   method="post">{% csrf_token %}
+         <table>
+                 {{miFormulario.as_table}}
+         </table>
+         <input type="submit",value="Enviar">
+</form>  
+
+
+
+{% endblock %}-->
